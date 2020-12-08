@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visitor index{% endblock %}
+
+{% block body %}
+    <h1>Visitor index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Description</th>
+                <th>Job</th>
+                <th>Picture</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for visitor in visitors %}
+            <tr>
+                <td>{{ visitor.id }}</td>
+                <td>{{ visitor.firstname }}</td>
+                <td>{{ visitor.lastname }}</td>
+                <td>{{ visitor.city }}</td>
+                <td>{{ visitor.phone }}</td>
+                <td>{{ visitor.description }}</td>
+                <td>{{ visitor.job }}</td>
+                <td>{{ visitor.picture }}</td>
+                <td>
+                    <a href="{{ path('visitor_show', {'id': visitor.id}) }}">show</a>
+                    <a href="{{ path('visitor_edit', {'id': visitor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('visitor_new') }}">Create new</a>
+{% endblock %}
