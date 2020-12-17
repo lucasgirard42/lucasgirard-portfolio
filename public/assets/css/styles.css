@@ -1,0 +1,361 @@
+
+#navbar {
+  background-color: black; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.6s; /* Transition effect when sliding down (and up) */
+  z-index: 2;
+}
+
+.navbar-brand{
+  color: rgb(255, 206, 118) !important;
+
+}
+
+/* Style the navbar links */
+#navbar .nav-link {
+  float: left;
+  display: block;
+  color: rgb(255, 206, 118) !important;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+
+
+
+#navbar .nav-link:hover {
+  /* background-color: rgb(212, 9, 9); */
+  border: 1px solid rgb(255, 206, 118);
+  
+  color: black;
+}
+
+
+/* SECTION HEADER  */
+
+.masthead {
+    padding-top: calc(6rem + 74px);
+    padding-bottom: 6rem;
+    
+}
+.masthead .masthead-heading {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+    text-shadow: 4px 3px 0 #000000;
+}
+.masthead .masthead-subheading {
+    font-size: 1.25rem;
+}
+.masthead .masthead-avatar {
+    width: 15rem;
+}
+.masthead-avatar {
+    width: 15rem;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+    display:block;
+}
+
+/* .icon-scroll,
+.icon-scroll:before{
+  position: absolute;
+  left: 50%;
+ 
+}
+  
+
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  margin-left: -20px; 
+   top: 50%; 
+   margin-top: 340px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+  
+
+.icon-scroll:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+
+}
+  
+
+@keyframes scroll {
+   
+    0% {
+      opacity: 1
+    }
+  
+    
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+    
+
+} */
+.mouse-icon {
+  border: 2px solid white;
+  border-radius: 16px;
+  height: 80px;
+  width: 48px;
+  display: block;
+  z-index: 1;
+  opacity: 0.7;
+}
+.mouse-icon .wheel {
+  -webkit-animation-name: drop;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.mouse-icon .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: white;
+  width: 4px;
+  height: 12px;
+  top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@-webkit-keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+@keyframes drop {
+  0% {
+    top: 5px;
+    opacity: 0;
+  }
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+/* ABOUT */
+
+#about{
+  background-color: gray;
+}
+
+.text-uppercase{
+  color:white ;
+  
+}
+
+.text-uppercase-blue{
+  color:rgb(23, 34, 126) ;
+  text-transform: uppercase;
+  
+}
+
+.cv{
+  color: black;
+}
+
+/*  */
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: rgb(255, 206, 118) ;
+    border-radius: 1rem;
+    border-color: #2c3e50 !important;
+    
+  }
+  .divider-custom .divider-custom-line:first-child {
+    margin-right: 1rem;
+  }
+  .divider-custom .divider-custom-line:last-child {
+    margin-left: 1rem;
+  }
+  .divider-custom .divider-custom-icon {
+    color: #2c3e50 !important;
+    font-size: 2rem;
+  }
+  /* .divider-custom.divider-light .divider-custom-line {
+    background-color: #fff;
+  }
+  .divider-custom.divider-light .divider-custom-icon {
+    color: #fff !important;
+  } */
+
+  
+
+  .fa-connectdevelop {
+    animation: rotation 10s infinite linear;
+    /* color: rgb(255, 206, 118); */
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  .logoRotateBelge{
+   
+    color: rgb(255, 206, 118);
+  }
+  
+  .logoRotateBlue{
+   
+    color: rgb(23, 34, 126);
+  }
+  
+
+  .card{
+    background-color: black;
+  }
+
+  /* SECTION CONTACT */
+
+  .btn-xl{
+    background-color: rgb(23, 34, 126);
+    color: white;
+    width: 200px;
+  }
+
+  .btn-xl:hover{
+    background-color: white;
+    color: rgb(23, 34, 126);
+  }
+
+
+  /* SECTION FOOTER */
+
+  footer{
+    background-color: black;
+  }
+  h4 {
+   color: rgb(255, 206, 118) !important;
+  }
+
+  .fa-fw{
+    color: rgb(255, 206, 118);
+  }
+
+  .fa-fw:hover{
+    color: black;
+  }
+
+  .btn-social{
+    border: 1px solid rgb(255, 206, 118);
+  }
+
+  .btn-social:hover{
+    background-color: rgb(255, 206, 118);
+  }
+  
+
+  .card {
+    box-shadow: inset 0 0 0 4px black;
+    color: black;
+    -webkit-transition: color 0.25s 0.0833333333s;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+  }
+  
+  .card::before,
+  .card::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0rem;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .card::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+  }
+  
+  .card::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  
+  .card:hover {
+    color: #ffe593;
+  }
+  
+  .card:hover::before,
+  .card:hover::after {
+    border-color: rgb(255, 206, 118);
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  
+  .card:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+  }
+  
+  
