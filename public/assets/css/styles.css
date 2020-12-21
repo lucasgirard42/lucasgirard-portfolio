@@ -1,6 +1,6 @@
 
 #navbar {
-  background-color: black; /* Black background color */
+  background-color: black !important; /* Black background color */
   position: fixed; /* Make it stick/fixed */
   top: -100px; /* Hide the navbar 50 px outside of the top view */
   width: 100%; /* Full width */
@@ -194,6 +194,7 @@
   text-transform: uppercase;
   
 }
+
 
 .cv{
   color: black;

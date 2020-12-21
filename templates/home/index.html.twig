@@ -18,7 +18,6 @@
             <div class="divider-custom-icon"><i class="fab logoRotateBelge fa-connectdevelop "></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        <!-- <p class="masthead-subheading font-weight-light mb-0">Frontend  - Backend - Symfony</p> -->
         <div id="carouselContent" class="carousel slide p-5" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active text-center p-4">
@@ -35,7 +34,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class='icon-scroll'></div> -->
         <div class="mouse-icon"><div class="wheel"></div></div>
     </div>
 </header>
@@ -50,16 +48,17 @@
             <div class="divider-custom-icon"><i class="fab logoRotateBlue fa-connectdevelop" ></i></div>
             <div class="divider-custom-line"style="background-color:  rgb(23, 34, 126);"></div>
         </div>
-        <p>Bonjour, Je m'appelle Lucas Girard, 31 ans et diplômé du titre professionnel Développeur Web et Web Mobile grâce aux compétences acquises pendant ma formation de 8 mois à Simplon Roanne.<br/>
-            Mon langage de prédilection étant le PHP, pendant cette formation j'ai pu le pratiquer via différents CMS et frameworks tels que WordPress et Symfony.<br/>
-            J'ai aussi un attrait pour le développement web avec le HTML, CSS, JavaScript et le développement d'application mobile REACT NATIVE.<br/>
-            Je cherche une entreprise d'accueil qui pourrait me prendre en contrat d'apprentissage ou de professionnalisation pour décembre 2020. Je suis Mobile sur la région Auvergne-Rhône-Alpes.</p>
+        <p class="text-center">Lucas Girard, 31 ans, diplômé à titre professionnel Développeur Web et Web Mobile. Formé durant 8 mois à Simplon Roanne.</p><br/>
+            <p class="text-center">Langage de prédilection : PHP <br/>
+            Langages utilisés : Symfony, REACT <br/>
+            Langage complémentaires : HTML, CSS, JavaScript, REACT NATIVE, WordPress.</p><br/>
+            <p class="text-center">En recherche d'entreprise en contrat d'apprentissage ou de professionnalisation. Mobile sur la région Auvergne-Rhône-Alpes.</p>
         <div class="d-flex align-items-center flex-column">
             <a class="cv btn btn-xl  m-5" href="assets/styles/img/cv-LucasGirard-Déveleppeur-web-mobile.pdf" target="_blank">
                 <i class="fas fa-download mr-2"></i>
                 cv
             </a>
-            <p class="masthead-subheading font-weight-light mb-5">SYMFONY - PHP - HTLM  - CSS - JS - REACT - REACT NATIVE - BOOTSTRAP </p>
+            <!-- <p class="masthead-subheading font-weight-light mb-5">SYMFONY - PHP - HTLM  - CSS - JS - REACT - REACT NATIVE - BOOTSTRAP </p> -->
         </div>
     </div>
 </section>
@@ -105,39 +104,21 @@
         </div>
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <form id="contact-form" name="sentMessage" novalidate="novalidate">
+                 <form id="contact-form" name="sentMessage" novalidate="novalidate" method="POST">
+                {{ form_start(form) }}
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <!-- <label>Nom</label> -->
-                            <input class="form-control" id="name" type="text" placeholder="Nom"  required="required" data-validation-required-message="S'il vous plaît entrez votre nom"/>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <!-- <label>Adresse e-mail</label> -->
-                            <input class="form-control" id="email" placeholder="Adresse e-mail" type="email"  required="required" data-validation-required-message="Please enter your email address." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <!-- <label>Numéro de téléphone</label> -->
-                            <input class="form-control" id="phone" placeholder="Numéro de téléphone" type="tel" required="required" data-validation-required-message="Please enter your phone number." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <!-- <label>Message</label> -->
-                            <textarea class="form-control" id="message" placeholder="Message" rows="5" required="required" data-validation-required-message="Please enter a message."></textarea>
-                            <p class="help-block text-danger"></p>
+                            {{ form_row(form.nom) }}
+                            {{ form_row(form.email) }}
+                            {{ form_row(form.phone) }}
+                            {{ form_row(form.message) }}
                         </div>
                     </div>
                     <br />
-                    <div id="success"></div>
-                    <div class="form-group"><button class="btn  btn-xl " id="sendMessageButton" type="submit">Envoyer</button></div>
+                    <button class="btn btn-xl">{{ button_label|default('Envoyer') }}</button>
+                    {{ form_end(form) }}
                 </form>
+                <br>
             </div>
         </div>
     </div>
@@ -146,16 +127,6 @@
 <footer class="footer text-center  p-5" >
     <div class="container">
         <div class="row">
-            <!-- Footer Location-->
-            <!-- <div class="col-lg-4 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Location</h4>
-                <p class="lead mb-0">
-                    2215 John Daniel Drive
-                    <br />
-                    Clark, MO 65243
-                </p>
-            </div> -->
-            <!-- Footer Social Icons-->
             <div class="offset-lg-4 col-lg-4 offset-mb-5 mb-5 mb-lg-0">
                 <h4 class="textSocial text-uppercase mb-4">Sur le web</h4>
                 <a class="btn  btn-social mx-1" href="https://www.facebook.com/lucas.girard.9"><i class="fab fa-fw fa-facebook-f"></i></a>
@@ -163,15 +134,9 @@
                 <a class="btn  btn-social mx-1" href="https://www.linkedin.com/in/lucas-girard-d%C3%A9veloppeur-web-junior/"><i class="fab fa-fw fa-linkedin-in"></i></a>
                 <a class="btn  btn-social mx-1" href="https://github.com/lucasgirard42"><i class="fab fa-fw fa-github"></i></a>
             </div>
-            <!-- Footer About Text-->
-            <!-- <div class="col-lg-4">
-                <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                <p class="lead mb-0">
-                    Freelance is a free to use, MIT licensed Bootstrap theme created by
-                    <a href="http://startbootstrap.com">Start Bootstrap</a>
-                    .
-                </p>
-            </div> -->
+            <div class="offset-lg-4 col-lg-4 offset-mb-5 mb-5 mb-lg-0">
+            <img src="assets/styles/img/symfony_white_03.svg" alt=""/>
+            </div>
         </div>
     </div>
 </footer>
